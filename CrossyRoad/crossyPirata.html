@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Three.js Crossy Road Pirata</title>
+
+<link rel="stylesheet" href="../libs/jquery-ui/jquery-ui.css" />
+<link rel="stylesheet" href="../libs/colorpicker/css/colorpicker.css" />
+<link rel="stylesheet" href="../css/main.css" />
+<link rel="stylesheet" href="../css/threejsshadows.css" />
+
+<script src="../libs/jquery-3.3.1/jquery-3.3.1.js"></script>
+
+<script src="../libs/three.js/three.js"></script>
+<script src="../libs/colorpicker/js/colorpicker.js"></script>
+
+<script src="../libs/three.js/loaders/inflate.min.js"></script>
+<script src="../libs/three.js/loaders/FBXLoader.js"></script>
+<script src="../libs/three.js/utils/cloneFBX.js"></script>
+
+<script src="crossyPirata.js"></script>
+
+<script type="text/javascript">
+
+
+function initControls()
+{
+    $("#restartButton").click(
+        function() {
+            restartGame();
+        }
+    );
+
+}
+
+</script>
+
+<script type="text/javascript">
+
+	$(document).ready(
+			function() {
+
+				var canvas = document.getElementById("webglcanvas");
+
+				document.addEventListener("keydown", onKeyDown, false);
+
+				// create the scene
+				createScene(canvas);
+
+				initControls();
+
+		        // Run the run loop
+		        run();
+			}
+	);
+
+</script>
+
+</head>
+<body>
+
+<div id="container">
+    <canvas id="webglcanvas" width=800 height=600></canvas>
+	<div id="title">Three.js Crossy Road Pirata</div>
+	<div id="muerte">Estas Muerto!</div>
+	<div id="score">Score: 0</div>
+  <div id="button"><button type="button" name="startbtn" id="restartButton">Restart Game</button></div>
+</div>
+
+</div>
+
+
+</html>
