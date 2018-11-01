@@ -7,20 +7,31 @@
 }
 
 #score {
-	color: black;
+	position:absolute;
+	left: 40%;
+	top: 20px;
+	color: aqua;
+	font-size: 2em;
+	font-style: italic;
 }
 
 #restartButton
 {
 	display: none;
+	position:absolute;
+	left:75%;
+	top:20px;
+	color: darkred;
 }
 
 #muerte{
 	display: none;
 	position:absolute;
-	left:50%;
-	top:50px;
+	left:35%;
+	top: 70px;
 	color: Red;
+	font-size: 3em;
+	font-style: italic;
 }
 
 #prompt {
